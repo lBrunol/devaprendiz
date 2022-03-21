@@ -1,23 +1,55 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins-v9-latin-regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
   * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  html {
-    font-size: 62.5%;
-  }
+  ${({ theme }) => css`
+    html {
+      font-family: ${theme.font.family};
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
 
-  html, body, #__next {
-    height: 100%;
-  }
+    body.light {
+      --main-bg: ${theme.lightTheme.colors.mainBg};
+      --medium-bg: ${theme.lightTheme.colors.mediumBg};
+      --texts: ${theme.lightTheme.colors.texts};
+      --highlight: ${theme.lightTheme.colors.highlight};
+      --white: ${theme.lightTheme.colors.white};
+      --black: ${theme.lightTheme.colors.black};
+    }
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+    body.dark {
+      --main-bg: ${theme.darkTheme.colors.mainBg};
+      --medium-bg: ${theme.darkTheme.colors.mediumBg};
+      --texts: ${theme.darkTheme.colors.texts};
+      --highlight: ${theme.darkTheme.colors.highlight};
+      --white: ${theme.darkTheme.colors.white};
+      --black: ${theme.darkTheme.colors.black};
+    }
+
+    body {
+      background-color: var(--main-bg);
+      color: var(--texts);
+      font-size: ${theme.font.sizes.small};
+    }
+  `}
 `
 
 export default GlobalStyles
