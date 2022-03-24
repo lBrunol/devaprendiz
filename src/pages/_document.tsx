@@ -37,8 +37,10 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html>
-        <Head></Head>
-        <body>
+        <Head>
+          <link rel="stylesheet" href="/css/fontello-embedded.css" />
+        </Head>
+        <body className="dark">
           <Main></Main>
           <NextScript></NextScript>
         </body>

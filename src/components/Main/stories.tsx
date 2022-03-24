@@ -8,4 +8,9 @@ export default {
   decorators: [withKnobs]
 } as Meta
 
-export const Basic: Story = () => <Main title={text('Title', 'React Avançadão')} body={text('Body', 'É isso ai')} />
+export const Basic: Story = () => (
+  <Main
+    title={text('Title', 'React Avançadão')}
+    body={text('Body', 'É isso ai')}
+  />
+)
