@@ -3,6 +3,7 @@ const lightTheme = {
     mainBg: '#FFFFFF',
     mediumBg: '#f0f0f3',
     texts: '#333333',
+    textsSecond: '#ffa2d5',
     highlight: '#b600bd',
     white: '#FFFFFF',
     black: '#000000'
@@ -14,6 +15,7 @@ const darkTheme = {
     mainBg: '#1e1e1e',
     mediumBg: '#252526',
     texts: '#FFFFFF',
+    textsSecond: '#ffa2d5',
     highlight: '#b600bd',
     white: '#FFFFFF',
     black: '#000000'

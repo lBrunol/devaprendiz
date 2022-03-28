@@ -1,10 +1,17 @@
 import * as S from './styles'
 import SocialButton from '../SocialButton'
+import ResumedAboutMe from '../ResumedAboutMe'
 
 const Main = () => (
   <>
     <S.Container>
       <S.Aside>
+        <ResumedAboutMe
+          name="Bruno Araújo"
+          occupation="Tech Lead"
+          about="Desenvolvedor Web apaixonado por tecnologia! Nas horas vagas jogo CS Go e leio sobre política internacional, astronomia e economia."
+          imgPath="/jiren.png"
+        ></ResumedAboutMe>
         <SocialButton
           href="https://google.com"
           type="twitter"
