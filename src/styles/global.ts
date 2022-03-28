@@ -30,6 +30,10 @@ const GlobalStyles = createGlobalStyle`
       scroll-behavior: smooth;
     }
 
+    :root {
+      --gutter: ${theme.grid.gutter};
+    }
+
     body.light {
       --main-bg: ${theme.lightTheme.colors.mainBg};
       --medium-bg: ${theme.lightTheme.colors.mediumBg};
