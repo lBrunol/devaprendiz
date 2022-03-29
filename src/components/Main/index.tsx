@@ -1,6 +1,7 @@
 import * as S from './styles'
 import SocialButton from '../SocialButton'
 import ResumedAboutMe from '../ResumedAboutMe'
+import MainNavigation from '../MainNavigation'
 
 const Main = () => (
   <>
@@ -12,27 +13,24 @@ const Main = () => (
           about="Desenvolvedor Web apaixonado por tecnologia! Nas horas vagas jogo CS Go e leio sobre política internacional, astronomia e economia."
           imgPath="/jiren.png"
         ></ResumedAboutMe>
-        <SocialButton
-          href="https://google.com"
-          type="twitter"
-          description={`Link para o Twitter`}
-        ></SocialButton>
-        <SocialButton
-          href="https://google.com"
-          type="youtube"
-          description={`Link para o YouTube`}
-        ></SocialButton>
-
-        <SocialButton
-          href="https://google.com"
-          type="facebook"
-          description={`Link para o Facebook`}
-        ></SocialButton>
-        <SocialButton
-          href="https://google.com"
-          type="instagram"
-          description={`Link para o Instagram`}
-        ></SocialButton>
+        <MainNavigation></MainNavigation>
+        <S.SocialButtonContainer>
+          <SocialButton
+            href="https://github.com/lbrunol"
+            type="github"
+            description={`Link para o GitHub`}
+          ></SocialButton>
+          <SocialButton
+            href="https://www.linkedin.com/in/bruno-ara%C3%BAjo-82550199/"
+            type="linkedin"
+            description={`Link para o LinkedIn`}
+          ></SocialButton>
+          <SocialButton
+            href="https://twitter.com/lbruno_alvesl"
+            type="twitter"
+            description={`Link para o Twitter`}
+          ></SocialButton>
+        </S.SocialButtonContainer>
       </S.Aside>
       <S.Main>
         <p>

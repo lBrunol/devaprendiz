@@ -45,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
       --main-bg: ${theme.lightTheme.colors.mainBg};
       --medium-bg: ${theme.lightTheme.colors.mediumBg};
       --texts: ${theme.lightTheme.colors.texts};
-      --texts-second: ${theme.lightTheme.colors.textsSecond}
+      --texts-second: ${theme.lightTheme.colors.textsSecond};
       --highlight: ${theme.lightTheme.colors.highlight};
       --white: ${theme.lightTheme.colors.white};
       --black: ${theme.lightTheme.colors.black};
@@ -55,7 +55,7 @@ const GlobalStyles = createGlobalStyle`
       --main-bg: ${theme.darkTheme.colors.mainBg};
       --medium-bg: ${theme.darkTheme.colors.mediumBg};
       --texts: ${theme.darkTheme.colors.texts};
-      --texts-second: ${theme.darkTheme.colors.textsSecond}
+      --texts-second: ${theme.darkTheme.colors.textsSecond};
       --highlight: ${theme.darkTheme.colors.highlight};
       --white: ${theme.darkTheme.colors.white};
       --black: ${theme.darkTheme.colors.black};

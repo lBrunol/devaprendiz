@@ -5,10 +5,17 @@ export const Container = styled.div`
   grid-template-columns: 2fr 8fr;
   gap: var(--gutter);
 `
+
+export const SocialButtonContainer = styled.div`
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  font-size: var(--font-xlarge);
+`
 export const Aside = styled.aside`
+  padding: var(--gutter);
   height: 100vh;
   background-color: var(--medium-bg);
-  padding: var(--gutter);
   border-right: 1px solid var(--highlight);
 `
 export const Main = styled.main`

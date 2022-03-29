@@ -10,6 +10,7 @@ type Props = {
     | 'youtube'
     | 'instagram'
     | 'behance'
+    | 'linkedin'
   href: string
   description?: string
 }

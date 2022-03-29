@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: grid;
   justify-content: center;
+  align-content: baseline;
   text-align: center;
   margin-top: 2rem;
 `
@@ -11,7 +12,7 @@ export const Name = styled.h2`
   font-size: var(--font-large);
   color: var(--texts-second);
 `
-export const Occupation = styled.h1`
+export const Occupation = styled.h3`
   font-size: var(--font-medium);
   color: var(--texts-second);
   margin-bottom: var(--gutter);
@@ -24,5 +25,5 @@ export const Image = styled.img`
   margin-bottom: var(--gutter);
 `
 export const About = styled.p`
-  font-size: var(--font-xsmall);
+  font-size: var(--font-xxsmall);
 `
