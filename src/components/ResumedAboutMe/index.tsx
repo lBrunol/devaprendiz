@@ -16,9 +16,11 @@ const ResumedAboutMe = ({
 }: Props) => (
   <S.Container>
     <S.Image src={imgPath} />
-    <S.Name>{name}</S.Name>
-    <S.Occupation>{occupation}</S.Occupation>
-    <S.About>{about}</S.About>
+    <div>
+      <S.Name>{name}</S.Name>
+      <S.Occupation>{occupation}</S.Occupation>
+      <S.About>{about}</S.About>
+    </div>
   </S.Container>
 )
 

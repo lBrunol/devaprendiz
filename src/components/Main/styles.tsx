@@ -1,9 +1,13 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 2fr 8fr;
   gap: var(--gutter);
+  ${media.lessThan('huge')`
+    grid-template-columns: 1fr;
+  `}
 `
 
 export const SocialButtonContainer = styled.div`
@@ -11,15 +15,26 @@ export const SocialButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   font-size: var(--font-xlarge);
+  ${media.lessThan('huge')`
+    display: none;
+  `}
 `
 export const Aside = styled.aside`
   padding: var(--gutter);
   height: 100vh;
   background-color: var(--medium-bg);
   border-right: 1px solid var(--highlight);
+  ${media.lessThan('huge')`
+    height: 0;
+    margin: 0;
+    padding: 0;
+  `}
 `
 export const Main = styled.main`
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--main-bg);
   padding: var(--gutter);
+  ${media.lessThan('huge')`
+    padding-top: 10vh;
+  `}
 `
