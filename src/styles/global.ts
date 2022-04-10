@@ -23,6 +23,11 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  button:hover {
+    cursor: pointer;
+    transition: .2 ease-in-out all;
+  }
+
   ${({ theme }) => css`
     html {
       font-family: ${theme.font.family};

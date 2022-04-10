@@ -1,16 +1,15 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const Container = styled.nav`
+interface ContainerProps {
+  isMenuOpen: boolean
+}
+
+export const Container = styled.nav<ContainerProps>`
   text-align: center;
   margin-top: 6rem;
-  ${media.lessThan('huge')`
-    width: 100%;
-    height: 8vh;
-    background-color: var(--medium-bg);
-    position: fixed;
-    bottom: 0;
-    right: 0;
+  ${({ isMenuOpen }: ContainerProps) => media.lessThan('huge')`
+    transform: ${isMenuOpen ? 'translateX(0)' : 'translateX(-100vw)'}
   `}
 `
 

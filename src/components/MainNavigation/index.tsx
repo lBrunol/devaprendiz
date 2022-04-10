@@ -1,8 +1,12 @@
 import React from 'react'
 import * as S from './styles'
 
-const MainNavigation = () => (
-  <S.Container>
+type Props = {
+  isMenuOpen: boolean
+}
+
+const MainNavigation = ({ isMenuOpen }: Props) => (
+  <S.Container isMenuOpen={isMenuOpen}>
     <S.List>
       <S.Item>
         <S.Link href="/">Home</S.Link>
