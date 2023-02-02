@@ -1,16 +1,9 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-interface ContainerProps {
-  isMenuOpen: boolean
-}
-
-export const Container = styled.nav<ContainerProps>`
+export const Container = styled.nav`
   text-align: center;
   margin-top: 6rem;
-  ${({ isMenuOpen }: ContainerProps) => media.lessThan('huge')`
-    transform: ${isMenuOpen ? 'translateX(0)' : 'translateX(-100vw)'}
-  `}
 `
 
 export const List = styled.ul`
@@ -43,4 +36,7 @@ export const Link = styled.a`
     border-color: var(--highlight);
     width: 100%;
   }
+  ${media.lessThan('huge')`
+    font-size: var(--font-xlarge);
+  `}
 `

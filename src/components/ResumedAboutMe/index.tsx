@@ -6,15 +6,17 @@ type Props = {
   name: string
   occupation?: string
   about: string
+  showMobile: boolean
 }
 
 const ResumedAboutMe = ({
   imgPath,
   name,
   occupation = 'Link para uma rede social',
-  about = 'Link para uma rede social'
+  about = 'Link para uma rede social',
+  showMobile = true
 }: Props) => (
-  <S.Container>
+  <S.Container showMobile={showMobile}>
     <S.Image src={imgPath} />
     <div>
       <S.Name>{name}</S.Name>

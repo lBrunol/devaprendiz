@@ -1,22 +1,28 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const Container = styled.div`
+interface ContainerProps {
+  showMobile: boolean
+}
+
+export const Container = styled.div<ContainerProps>`
   display: grid;
   justify-content: center;
   align-content: baseline;
   text-align: center;
   margin-top: 2rem;
 
+  ${({ showMobile }: ContainerProps) => media.lessThan('huge')`
+    display: ${showMobile ? 'grid' : 'none'};
+  `}
+
   ${media.lessThan('huge')`
     width: 100%;
-    height: 10vh;
     margin-top: 0;
     padding: var(--gutter);
     background-color: var(--medium-bg);
     grid-template-columns: 80px 8fr;
     justify-items: flex-start;
-    position: fixed;
     top: 0;
     left: 0;
   `}

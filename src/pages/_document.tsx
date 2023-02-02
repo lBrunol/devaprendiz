@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="stylesheet" href="/css/fontello-embedded.css" />
         </Head>
-        <body className="dark">
+        <body className="light">
           <Main></Main>
           <NextScript></NextScript>
         </body>

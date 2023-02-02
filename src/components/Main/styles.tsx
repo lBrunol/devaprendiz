@@ -1,22 +1,16 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+interface ContainerProps {
+  isMenuOpen: boolean
+}
+
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 2fr 8fr;
+  grid-template: 'aside main' 100vh / 2fr 8fr;
   gap: var(--gutter);
   ${media.lessThan('huge')`
-    grid-template-columns: 1fr;
-  `}
-`
-export const NavigationContainer = styled.div`
-  ${media.lessThan('huge')`
-    width: 100%;
-    height: 8vh;
-    background-color: var(--medium-bg);
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    grid-template: 'mobileHeader' 10vh 'main' 82vh 'mobileFooter' 8vh / 1fr;
   `}
 `
 export const SocialButtonContainer = styled.div`
@@ -24,26 +18,44 @@ export const SocialButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   font-size: var(--font-xlarge);
+`
+export const MobileHeader = styled.div`
+  grid-area: mobileHeader;
+  display: none;
   ${media.lessThan('huge')`
-    display: none;
+    display: flex;
   `}
 `
+export const MobileFooter = styled.div`
+  grid-area: mobileFooter;
+  display: none;
+  padding: var(--gutter);
+  background-color: var(--medium-bg);
+  ${media.lessThan('huge')`
+    display: flex;
+    justify-content: center;
+  `}
+`
+
 export const Aside = styled.aside`
+  grid-area: aside;
   padding: var(--gutter);
   height: 100vh;
   background-color: var(--medium-bg);
   border-right: 1px solid var(--highlight);
-  ${media.lessThan('huge')`
-    height: 0;
-    margin: 0;
-    padding: 0;
+  transition: transform 0.3s linear;
+  ${({ isMenuOpen }: ContainerProps) => media.lessThan('huge')`
+    position: absolute;
+    width: 100%;
+    transform: ${isMenuOpen ? 'translateX(0)' : 'translateX(-100vw)'};
+    height: 95vh;
   `}
 `
 export const Main = styled.main`
-  height: 100vh;
+  grid-area: main;
   background-color: var(--main-bg);
   padding: var(--gutter);
   ${media.lessThan('huge')`
-    padding-top: 10vh;
+    overflow: auto;
   `}
 `

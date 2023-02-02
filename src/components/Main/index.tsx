@@ -10,20 +10,24 @@ const Main = () => {
   return (
     <>
       <S.Container>
-        <S.Aside>
+        <S.MobileHeader>
           <ResumedAboutMe
             name="Bruno Araújo"
             occupation="Tech Lead"
             about="Desenvolvedor Web apaixonado por tecnologia! Nas horas vagas jogo CS Go e leio sobre política internacional, astronomia e economia."
-            imgPath="/jiren.png"
+            imgPath="/bruno-perfil.jpeg"
+            showMobile={true}
           ></ResumedAboutMe>
-          <S.NavigationContainer>
-            <NavigationControl
-              isMenuOpen={isMenuOpen}
-              setIsMenuOpen={setIsMenuOpen}
-            ></NavigationControl>
-            <MainNavigation isMenuOpen={isMenuOpen}></MainNavigation>
-          </S.NavigationContainer>
+        </S.MobileHeader>
+        <S.Aside isMenuOpen={isMenuOpen}>
+          <ResumedAboutMe
+            name="Bruno Araújo"
+            occupation="Tech Lead"
+            about="Desenvolvedor Web apaixonado por tecnologia! Nas horas vagas jogo CS Go e leio sobre política internacional, astronomia e economia."
+            imgPath="/bruno-perfil.jpeg"
+            showMobile={false}
+          ></ResumedAboutMe>
+          <MainNavigation></MainNavigation>
           <S.SocialButtonContainer>
             <SocialButton
               href="https://github.com/lbrunol"
@@ -101,6 +105,12 @@ const Main = () => {
             vestibulum sed rhoncus ante.
           </p>
         </S.Main>
+        <S.MobileFooter>
+          <NavigationControl
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
+          ></NavigationControl>
+        </S.MobileFooter>
       </S.Container>
     </>
   )
