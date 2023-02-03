@@ -49,6 +49,7 @@ export const Aside = styled.aside`
     width: 100%;
     transform: ${isMenuOpen ? 'translateX(0)' : 'translateX(-100vw)'};
     height: 95vh;
+    z-index: 2;
   `}
 `
 export const Main = styled.main`
