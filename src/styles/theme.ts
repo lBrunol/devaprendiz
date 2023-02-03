@@ -32,13 +32,15 @@ export default {
       "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     bold: 600,
     sizes: {
+      xxxsmall: '1.2rem',
       xxsmall: '1.4rem',
       xsmall: '1.6rem',
       small: '1.8rem',
       medium: '2.2rem',
       large: '2.6rem',
       xlarge: '3.4rem',
-      xxlarge: '5.2rem'
+      xxlarge: '5.2rem',
+      xxxlarge: '6.0rem'
     }
   },
   darkTheme,

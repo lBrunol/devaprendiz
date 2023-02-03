@@ -3,8 +3,16 @@ import { createGlobalStyle, css } from 'styled-components'
 const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Poppins';
-    src: url('/fonts/poppins-v9-latin-regular.woff2');
+    src: url('/fonts/Poppins-Regular.ttf');
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Light');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
@@ -37,6 +45,7 @@ const GlobalStyles = createGlobalStyle`
 
     :root {
       --gutter: ${theme.grid.gutter};
+      --font-xxxsmall: ${theme.font.sizes.xxxsmall};
       --font-xxsmall: ${theme.font.sizes.xxsmall};
       --font-xsmall: ${theme.font.sizes.xsmall};
       --font-small: ${theme.font.sizes.small};
@@ -44,6 +53,7 @@ const GlobalStyles = createGlobalStyle`
       --font-large: ${theme.font.sizes.large};
       --font-xlarge: ${theme.font.sizes.xlarge};
       --font-xxlarge: ${theme.font.sizes.xxlarge};
+      --font-xxxlarge: ${theme.font.sizes.xxxlarge};
     }
 
     body.light {
