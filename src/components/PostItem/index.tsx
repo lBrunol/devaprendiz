@@ -3,8 +3,8 @@ import Link from 'next/link'
 import React from 'react'
 import * as S from './styles'
 
-const PostItem = ({ type, typeColor, date, title, excerpt, link }: Post) => (
-  <Link href={link}>
+const PostItem = ({ type, typeColor, date, title, excerpt, slug }: Post) => (
+  <Link href={`post/${slug}`}>
     <S.Link>
       <S.Date>{date}</S.Date>
       <S.Title>

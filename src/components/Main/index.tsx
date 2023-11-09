@@ -64,7 +64,7 @@ const Main = () => {
                   id={post.id}
                   key={post.id}
                   date={post.date}
-                  link={post.link}
+                  slug={post.slug}
                   title={post.title}
                   excerpt={post.excerpt}
                   type={post.type}
