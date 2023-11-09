@@ -16,12 +16,14 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-display: swap;
   }
+  *,::after,::before {
+    box-sizing: border-box
+  }
 
-  * {
+  body {
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: border-box;
     vertical-align: baseline;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

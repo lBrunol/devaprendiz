@@ -13,7 +13,6 @@ const Main = () => {
   const [posts, setPosts] = useState<Post[]>([])
   useEffect(() => {
     if (fakePosts.length > 0) {
-      console.log(fakePosts)
       setPosts(fakePosts)
     }
   }, [])
