@@ -1,17 +1,29 @@
 import React from 'react'
 import * as S from './styles'
+import Link from 'next/link'
 
 const MainNavigation = () => (
   <S.Container>
     <S.List>
       <S.Item>
-        <S.Link href="/">Home</S.Link>
+        <Link href="/" passHref>
+          <S.LinkNav>Home</S.LinkNav>
+        </Link>
       </S.Item>
       <S.Item>
-        <S.Link href="/">Sobre mim</S.Link>
+        <Link href="/about" passHref>
+          <S.LinkNav>Sobre mim</S.LinkNav>
+        </Link>
       </S.Item>
       <S.Item>
-        <S.Link href="/">Portfólio</S.Link>
+        <Link href="/" passHref>
+          <S.LinkNav>Currículo</S.LinkNav>
+        </Link>
+      </S.Item>
+      <S.Item>
+        <Link href="/" passHref>
+          <S.LinkNav>Portfólio</S.LinkNav>
+        </Link>
       </S.Item>
     </S.List>
   </S.Container>

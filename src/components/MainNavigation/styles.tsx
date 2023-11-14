@@ -13,7 +13,7 @@ export const List = styled.ul`
 export const Item = styled.li`
   color: var(--texts-second);
 `
-export const Link = styled.a`
+export const LinkNav = styled.a`
   display: inline-block;
   color: var(--highlight);
   font-size: var(--font-xsmall);
