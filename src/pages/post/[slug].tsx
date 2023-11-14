@@ -2,7 +2,8 @@ import { Post } from 'interfaces/post'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import fakePosts from 'posts'
-import * as S from './styles'
+import Base from 'components/Base'
+import PostContent from 'components/PostContent'
 
 const PostPage = () => {
   const router = useRouter()
@@ -16,10 +17,9 @@ const PostPage = () => {
   }, [router.query])
 
   return (
-    <S.PostContent>
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
-    </S.PostContent>
+    <Base>
+      <PostContent post={post} />
+    </Base>
   )
 }
 export default PostPage
